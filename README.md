@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Linktree com React, TypeScript, Tailwind CSS e Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação de Linktree desenvolvida utilizando **React**, **TypeScript**, **Tailwind CSS** e **Firebase**. A aplicação possui funcionalidades de cadastro e exibição de links e redes sociais, além de uma página de autenticação para proteger as áreas administrativas.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Página Home**: Exibe os links e redes sociais cadastradas. Esta página é pública e acessível para qualquer visitante.
+- **Página de Admin**: Permite o cadastro e gerenciamento dos links que serão exibidos na página Home. Esta página é protegida por autenticação.
+- **Página de Redes Sociais**: Permite o cadastro e gerenciamento dos links das redes sociais. Assim como a página de Admin, é protegida por autenticação.
+- **Página de Login**: Acessível apenas para usuários cadastrados no banco de dados. Protege as páginas de Admin e Redes Sociais, garantindo que apenas usuários autenticados possam gerenciar os links.
+- **Banco de Dados**: Os links e redes sociais cadastrados são armazenados no banco de dados do **Firebase** e exibidos dinamicamente na página Home.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Firebase**
 
-- Configure the top-level `parserOptions` property like this:
+## Hospedagem
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+O site foi hospedado via **Vercel**.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Créditos
+Este projeto foi realizado juntamente ao curso de React + TypeScript do professor Matheus Fraga, na plataforma Udemy. Algumas funcionalidades adicionais foram adicionadas por Lucas Benini.
